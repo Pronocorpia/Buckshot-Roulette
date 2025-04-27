@@ -1,12 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
 
-<VBox spacing="20" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
-    <Label text="Buckshot Roulette" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
-    <Label fx:id="playerHealthLabel" text="Player Health: 2" />
-    <Label fx:id="computerHealthLabel" text="Opponent Health: 2" />
-    <Button fx:id="shootSelfButton" text="Shoot Yourself" />
-    <Button fx:id="shootOpponentButton" text="Shoot Opponent" />
+<VBox spacing="20" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml">
+    <!-- Game Title -->
+    <Label text="Buckshot Roulette" styleClass="title-label" />
+
+    <!-- Player Section -->
+    <HBox spacing="10" alignment="CENTER">
+        <ImageView fx:id="playerImage" fitWidth="100" fitHeight="100" />
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <Label text="Player Health:" styleClass="health-label" />
+            <ProgressBar fx:id="playerHealthBar" prefWidth="200" />
+        </VBox>
+    </HBox>
+
+    <!-- Opponent Section -->
+    <HBox spacing="10" alignment="CENTER">
+        <ImageView fx:id="opponentImage" fitWidth="100" fitHeight="100" />
+        <VBox spacing="5" alignment="CENTER_LEFT">
+            <Label text="Opponent Health:" styleClass="health-label" />
+            <ProgressBar fx:id="opponentHealthBar" prefWidth="200" />
+        </VBox>
+    </HBox>
+
+    <!-- Action Buttons -->
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="shootYourselfButton" text="Shoot Yourself" styleClass="action-button" />
+        <Button fx:id="shootOpponentButton" text="Shoot Opponent" styleClass="action-button" />
+    </HBox>
+    
+    <!-- Message Area -->
+    <Label fx:id="messageLabel" text="" styleClass="message-label" />
+
+    <!-- CSS Styling -->
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
 </VBox>
