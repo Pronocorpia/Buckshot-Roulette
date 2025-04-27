@@ -1,18 +1,20 @@
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        // Load the FXML file
-        Parent root = FXMLLoader.load(getClass().getResource("GameUI.fxml"));
-        
-        // Set the scene and stage
-        Scene scene = new Scene(root);
-        primaryStage.setTitle("Buckshot Roulette");
+    public void start(Stage primaryStage) {
+        Button btn = new Button("Say Hello!");
+        btn.setOnAction(e -> System.out.println("Hello, JavaFX!"));
+
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
+
+        Scene scene = new Scene(root, 300, 200);
+        primaryStage.setTitle("Test JavaFX Application");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
