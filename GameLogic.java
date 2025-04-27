@@ -32,11 +32,23 @@ public class GameLogic {
         return false; // A blank bullet was fired
     }
 
+    // Enemy's turn to shoot randomly
+    public boolean enemyTurn() {
+        if (playerHealth <= 0 || computerHealth <= 0) return false; // Game over
+
+        int target = rand.nextInt(2); // 0 = Player, 1 = Self
+        return shoot(target);
+    }
+
     public int getPlayerHealth() {
         return playerHealth;
     }
 
     public int getComputerHealth() {
         return computerHealth;
+    }
+
+    public boolean isGameOver() {
+        return playerHealth <= 0 || computerHealth <= 0;
     }
 }
