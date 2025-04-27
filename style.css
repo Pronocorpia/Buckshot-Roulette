@@ -1,0 +1,73 @@
+/* General Styling */
+.root {
+    background-color: #2c3e50;         /* Standard */
+    -webkit-background-color: #2c3e50; /* Webkit */
+    -moz-background-color: #2c3e50;    /* Mozilla */
+    padding: 20;                      /* Standard */
+    -webkit-padding: 20;              /* Webkit */
+    -moz-padding: 20;                 /* Mozilla */
+    font-family: "Arial", sans-serif; /* Standard */
+    -webkit-font-family: "Arial", sans-serif;
+    -moz-font-family: "Arial", sans-serif;
+}
+
+/* Title Label */
+.title-label {
+    font-size: 36px;                 /* Standard */
+    -webkit-font-size: 36px;
+    -moz-font-size: 36px;
+    font-weight: bold;               /* Standard */
+    -webkit-font-weight: bold;
+    -moz-font-weight: bold;
+    -color: #ecf0f1;              /* Standard */
+}
+
+/* Health Labels */
+.health-label {
+    font-size: 16px;                 /* Standard */
+    -webkit-font-size: 16px;
+    -moz-font-size: 16px;
+    color: #ecf0f1;                  /* Standard */
+}
+
+/* Progress Bar */
+.progress-bar {
+    -fx-accent: #2ecc71;
+}
+
+/* Action Buttons */
+.action-button {
+    background-color: #3498db;       /* Standard */
+    -webkit-background-color: #3498db;
+    -moz-background-color: #3498db;
+    color: #ecf0f1;                  /* Standard */
+    font-size: 16px;                 /* Standard */
+    -webkit-font-size: 16px;
+    -moz-font-size: 16px;
+    padding: 10px;                   /* Standard */
+    -webkit-padding: 10px;
+    -moz-padding: 10px;
+    border-radius: 5px;              /* Standard */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.action-button:hover {
+    background-color: #2980b9;       /* Standard */
+    -webkit-background-color: #2980b9;
+    -moz-background-color: #2980b9;
+}
+
+/* Message Label */
+.message-label {
+    font-size: 14px;                 /* Standard */
+    -webkit-font-size: 14px;
+    -moz-font-size: 14px;
+    font-style: italic;              /* Standard */
+    -webkit-font-style: italic;
+    -moz-font-style: italic;
+    padding: 10px;                   /* Standard */
+    -webkit-padding: 10px;
+    -moz-padding: 10px;
+    color: #ecf0f1;                  /* Standard */
+}
