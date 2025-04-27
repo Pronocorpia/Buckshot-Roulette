@@ -26,17 +26,21 @@ public class GameController {
         updateHealthLabels();
 
         // Set button actions
-        shootSelfButton.setOnAction(e -> {
+        shootSelfButton.setOnAction(event -> {
             if (game.shoot(0)) {
                 System.out.println("Player shot themselves!");
+            } else {
+                System.out.println("Player fired a blank.");
             }
             updateHealthLabels();
             checkGameOver();
         });
 
-        shootOpponentButton.setOnAction(e -> {
+        shootOpponentButton.setOnAction(event -> {
             if (game.shoot(1)) {
                 System.out.println("Player shot the opponent!");
+            } else {
+                System.out.println("Player fired a blank.");
             }
             updateHealthLabels();
             checkGameOver();
